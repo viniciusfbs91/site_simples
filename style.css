@@ -501,6 +501,14 @@ section {
     color: var(--text-dark);
 }
 
+.label--below {
+    display: block; /* força quebra de linha abaixo do título */
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
 .service__description {
     color: var(--text-light);
     line-height: 1.6;
