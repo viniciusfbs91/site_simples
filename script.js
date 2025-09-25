@@ -19,6 +19,7 @@ const navMenu = document.querySelector('.nav__menu');
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('nav__menu--active');
+        document.body.classList.toggle('menu-open');
     });
 }
 
@@ -55,4 +56,14 @@ window.addEventListener('scroll', () => {
         header.style.background = '#ffffff';
         header.style.backdropFilter = 'none';
     }
+});
+
+// Fecha o menu mobile ao clicar em um link (melhora navegação em dispositivos móveis)
+document.querySelectorAll('.nav__menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('nav__menu--active')) {
+            navMenu.classList.remove('nav__menu--active');
+            document.body.classList.remove('menu-open');
+        }
+    });
 });
