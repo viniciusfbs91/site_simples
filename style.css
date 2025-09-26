@@ -558,6 +558,86 @@ section {
     line-height: 1.6;
 }
 
+/* Advanced Automation Section */
+.advanced-automation {
+    padding: 5rem 0;
+    background: var(--background-white);
+}
+
+.advanced__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.advanced__category {
+    background: var(--background-light);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advanced__category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.advanced__category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.advanced__category-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.advanced__category-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.advanced__category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.advanced__list {
+    list-style: none;
+    padding: 0;
+}
+
+.advanced__list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.advanced__list li:last-child {
+    margin-bottom: 0;
+}
+
+.advanced__list i {
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+    font-size: 0.8rem;
+    min-width: 16px;
+}
+
 .service__card {
     background: var(--background-white);
     padding: 2.5rem;
@@ -1072,11 +1152,29 @@ section {
         gap: 1.5rem;
     }
     
-    .example__card {
-        padding: 1.5rem;
+    .advanced__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .advanced__category {
+        padding: 2rem;
+    }
+    
+    .advanced__category-header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .advanced__category-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 
-    .service__card {
+    .example__card {
+        padding: 1.5rem;
+    }    .service__card {
         padding: 2rem;
     }    .service__icon {
         width: 60px;
