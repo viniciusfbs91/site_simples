@@ -504,6 +504,60 @@ section {
     gap: 2rem;
 }
 
+/* Examples Section */
+.examples {
+    padding: 5rem 0;
+    background: var(--background-light);
+}
+
+.examples__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.example__card {
+    background: var(--background-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.example__card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.example__icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.example__icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.example__card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.example__card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 .service__card {
     background: var(--background-white);
     padding: 2.5rem;
@@ -1013,11 +1067,18 @@ section {
         gap: 1.5rem;
     }
     
-    .service__card {
-        padding: 2rem;
+    .examples__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .service__icon {
+    .example__card {
+        padding: 1.5rem;
+    }
+
+    .service__card {
+        padding: 2rem;
+    }    .service__icon {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
